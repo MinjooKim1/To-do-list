@@ -10,17 +10,24 @@ plusBtn.addEventListener("click", addList);
 taskInput.addEventListener("focus", function () {
   taskInput.value = "";
 });
+taskInput.addEventListener("keypress", function (e) {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    document.getElementById("plus-btn").click();
+  }
+});
 
 for (let i = 1; i < tabs.length; i++) {
   tabs[i].addEventListener("click", function (event) {
     filter(event);
   });
-tabs.forEach(menu=>menu.addEventListener("click",(e)=>indicator(e)))
+  tabs.forEach((menu) => menu.addEventListener("click", (e) => indicator(e)));
 }
 function indicator(e) {
   underLine.style.left = e.currentTarget.offsetLeft + "px";
   underLine.style.width = e.currentTarget.offsetWidth + "px";
-  underLine.style.top = e.currentTarget.offsetTop + e.currentTarget.offsetHeight + "px";
+  underLine.style.top =
+    e.currentTarget.offsetTop + e.currentTarget.offsetHeight + "px";
 }
 
 function addList() {
