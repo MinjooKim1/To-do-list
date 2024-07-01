@@ -7,9 +7,7 @@ let filterList = [];
 let underLine = document.getElementById("under-line");
 
 plusBtn.addEventListener("click", addList);
-taskInput.addEventListener("focus", function () {
-  taskInput.value = "";
-});
+
 taskInput.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
     e.preventDefault();
@@ -31,6 +29,8 @@ function indicator(e) {
 }
 
 function addList() {
+  let taskValue = taskInput.value;
+  if (taskValue === "") return alert("write your to-do");
   let task = {
     id: generateID(),
     taskContent: taskInput.value,
@@ -38,7 +38,7 @@ function addList() {
   };
 
   taskList.push(task);
-  console.log(taskList);
+  taskInput.value = "";
   render();
 }
 
