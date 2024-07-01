@@ -1,19 +1,45 @@
 body{
     margin: 0;
     background-image: url(./image/bg\ image.jpeg);
+    min-height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
+
+}
+.con{
+padding: 13% 10%;
+height: 100vh;
+
+
 }
 .container{
-    background-color: white;
-    min-height: 100vh;
+    background-color: rgb(250, 240, 255);
+    min-height: 500px;
+    max-width: 500px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    
+    border-radius: 10px;
+
+    padding:20px;
+}
+h1{
+    text-align: center;
+    padding: 30px;
+
+}
+#task-input{
+    width: 70%;
+    border: 1px solid rgb(248, 203, 235);
+    background-color: rgb(248, 244, 249);
+}
+.input-wrap{
+    display: flex;
+    gap: 10px;
+
 }
 
 .task-area{
     border: solid 1px lightgray;
-    margin-top: 30px;
+    margin-top: 15px;
 }
 .task-taps{
     display: flex;
@@ -27,19 +53,35 @@ body{
     height: 4px;
     background-color: pink;
     position: absolute;
-    width: px;
+    width: 70px;
     left: 0px;
-    top: 0px;
+    top: 70px;
     padding: 0;
     transition: 0.5s;
 }
 .tasks{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
 }
 .task-done{
     text-decoration: line-through;
 }
+
 .task-taps div{
     cursor: pointer
+}
+button{
+    background-color: rgb(243, 151, 218);
+    border: solid 1px lightgray;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 10%;
+    margin: 3px;
+}
+#task-board>div>div:nth-child(2)>button:nth-child(2){
+    background-color: rgb(249, 224, 255);
+    border: solid 1px background-color rgb(243, 151, 218);
+    color: rgb(243, 151, 218)
 }
