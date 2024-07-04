@@ -83,7 +83,7 @@ button{
 #task-board>div>div:nth-child(2)>button:nth-child(2){
     background-color: rgb(249, 224, 255);
     border: solid 1px background-color rgb(243, 151, 218);
-    color: rgb(243, 151, 218)
+    color: rgb(251, 84, 84)
 }
 @media (max-width: 600px){
 .con{
