@@ -85,3 +85,14 @@ button{
     border: solid 1px background-color rgb(243, 151, 218);
     color: rgb(243, 151, 218)
 }
+@media (max-width: 600px){
+.con{
+    padding: 0;
+}
+.container{
+        height: 100vh;
+    }
+#task-input{
+    width: 100%;
+}
+}
